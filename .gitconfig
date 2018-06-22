@@ -1,0 +1,18 @@
+[core]
+	excludesfile = /Users/so-negishi/.gitignore_global
+[user]
+	name = So Negishi
+	email = so-negishi@cookpad.com
+[alias]
+	st = status -sb
+	co = checkout
+	fe = fetch
+	ci = commit -v
+	g = grep -i
+	df = diff
+	cp = cherry-pick
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
