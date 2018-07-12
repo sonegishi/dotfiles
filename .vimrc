@@ -8,10 +8,10 @@ endif
 set nocompatible
 imap <C-g> <esc>
 
-"" file系
-" 保存時に行末の空白を除去する
+"" For files
+" Eliminate white spaces at the end of each line when saving a file
 autocmd BufWritePre * :%s/\s\+$//ge
-" 全角スペースを視覚化
+" Visualize em spaces
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 set autoread
@@ -22,7 +22,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
-"" 見た目
+"" Appearance
 set number
 set showmatch
 set showcmd
@@ -33,30 +33,30 @@ set listchars=tab:>\
 set scrolloff=5
 set guifont=SourceCodePro-Regular:h12
 
-"" ステータスライン
-" ステータスラインに文字コード/改行文字種別を表示
+"" Status-line
+" Show character codes and newline character classes on status-line
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-" 常にステータス行を表示
+" Always show status-line
 set laststatus=2
 
-"" インデント
+"" Indentation
 set tabstop=2 shiftwidth=2
 set autoindent smarttab
-" spaceがいい
+" Put spaces instead of a tab
 set expandtab
 
-"" 入力
-" バックスペースでインデントや改行を削除できるようにする
+"" Input
+" Enable to delete newlines and indentations using backspace
 set backspace=2
 
-"" 検索
+"" Searching
 set wrapscan
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 
-" 便利
+" Utils
 nnoremap <silent> <Space>q :quit<CR>
 nnoremap <silent> <Space>Q :quit!<CR>
 nnoremap <silent> <Space>e :wq<CR>
@@ -91,7 +91,7 @@ autocmd FileType coffee set tabstop=2 shiftwidth=2
 let g:vim_json_syntax_conceal = 0
 
 "------------------------------------
-" indent guides
+" Indentation Guides
 "------------------------------------
 hi IndentGuidesOdd  ctermbg=white
 hi IndentGuidesEven ctermbg=lightgrey
@@ -106,7 +106,7 @@ let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 40
 
 set fileformats=unix,dos,mac
-" □とか○の文字があってもカーソル位置がずれないようにする
+" Fix a cursor position even if a sentence includes characters such as □and ○
 if exists('&ambiwidth')
   set ambiwidth=double
 endif
