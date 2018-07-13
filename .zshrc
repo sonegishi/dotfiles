@@ -30,6 +30,11 @@ colors
 # Path
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$GOENV_ROOT/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # History Setting
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -109,3 +114,6 @@ case ${OSTYPE} in
     # Setting for LinuxOS
     ;;
 esac
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export GOENV_ROOT=$HOME/.goenv
+export PATH=$GOENV_ROOT/bin:$PATH
