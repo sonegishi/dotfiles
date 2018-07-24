@@ -10,7 +10,8 @@
 	ci = commit -v
 	g = grep -i
 	df = diff
-	cp = cherry-pick
+  cp = cherry-pick
+  branches = branch -a
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
