@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/so-negishi/.gitignore_global
+	excludesfile = /Users/$USER/.gitignore_global
 [user]
 	name = So Negishi
 	email = so-negishi@cookpad.com
