@@ -1,8 +1,8 @@
 [core]
 	excludesfile = /Users/$USER/.gitignore_global
 [user]
-	name = So Negishi
-	email = so-negishi@cookpad.com
+	name = sonegishi
+	email = 5055ngs@gmail.com
 [alias]
 	st = status -sb
 	co = checkout
