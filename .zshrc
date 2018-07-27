@@ -16,6 +16,8 @@ alias mv='mv -i'
 
 alias mkdir='mkdir -p'
 
+alias gcp='ssh cayenne@35.200.83.82 -i ~/.ssh/id_rsa_cayenne_dev'
+
 # Global Alias
 alias -g L='| less'
 alias -g G='| grep'
@@ -28,12 +30,26 @@ autoload -Uz colors
 colors
 
 # Path
+## rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init -)"
 
+## goenv
 export GOENV_ROOT=$HOME/.goenv
 export PATH=$GOENV_ROOT/bin:$PATH
-export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+eval "$(goenv init -)"
+
+## pyenv
+eval "$(pyenv init -)"
+
+## nodebrew
+export PATH=$PATH:/Users/negishi.so/.nodebrew/current/bin
+
+## others
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/opt/qt/bin:$PATH"
 
 # History Setting
 HISTFILE=~/.zsh_history
@@ -114,6 +130,4 @@ case ${OSTYPE} in
     # Setting for LinuxOS
     ;;
 esac
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export GOENV_ROOT=$HOME/.goenv
-export PATH=$GOENV_ROOT/bin:$PATH
+
