@@ -1,19 +1,20 @@
 [core]
-	excludesfile = /Users/$USER/.gitignore_global
+  excludesfile = /Users/SO/.gitignore_global
+  editor = vim -c \"set fenc=utf-8\"
 [user]
-	name = sonegishi
-	email = 5055ngs@gmail.com
+  name = sonegishi
+  email = 5055ngs@gmail.com
 [alias]
-	st = status -sb
-	co = checkout
-	fe = fetch
-	ci = commit -v
-	g = grep -i
-	df = diff
+  st = status -sb
+  co = checkout
+  fe = fetch
+  ci = commit -v
+  g = grep -i
+  df = diff
   cp = cherry-pick
   branches = branch -a
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

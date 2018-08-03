@@ -1,8 +1,16 @@
+#zmodload zsh/zprof && zprof
+
 #######################################
 # Alias
 
 alias be="bundle exec"
+alias pe='pyenv exec'
+alias p='python'
 alias g="git"
+
+alias rmstore="rm .DS_Store; rm */.DS_Store"
+alias rmstorer="rm **/.DS_Store"
+
 alias pythonserver='python -m SimpleHTTPServer'
 alias br='bin/rails'
 alias dc='docker-compose'
@@ -16,8 +24,6 @@ alias mv='mv -i'
 
 alias mkdir='mkdir -p'
 
-alias gcp='ssh cayenne@35.200.83.82 -i ~/.ssh/id_rsa_cayenne_dev'
-
 # Global Alias
 alias -g L='| less'
 alias -g G='| grep'
@@ -29,27 +35,47 @@ alias -g G='| grep'
 autoload -Uz colors
 colors
 
+REPORTTIME=3
+
+function current_branch() {
+  git branch | grep \* | awk '{print $2}'
+}
+
+function git-diff-numstat-additions() {
+  git diff $(current_branch)..master --numstat | awk 'NF==3 {plus+=$2} END {printf("+%\047d", plus)}'
+}
+
+function git-diff-numstat-deletions() {
+  git diff $(current_branch)..master --numstat | awk 'NF==3 {minus+=$1} END {printf("+%\047d", minus)}'
+}
+
+
 # Path
+## others
+export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+export PATH="/usr/local/Cellar/git/2.18.0/bin:$PATH"
+
 ## rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
-eval "$(rbenv init -)"
+if which pyenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ## goenv
 export GOENV_ROOT=$HOME/.goenv
 export PATH=$GOENV_ROOT/bin:$PATH
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-eval "$(goenv init -)"
+if which pyenv > /dev/null; then eval "$(goenv init -)"; fi
 
 ## pyenv
-eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ## nodebrew
 export PATH=$PATH:/Users/negishi.so/.nodebrew/current/bin
 
-## others
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/usr/local/opt/qt/bin:$PATH"
+setopt nolistbeep
 
 # History Setting
 HISTFILE=~/.zsh_history
@@ -66,6 +92,7 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 # Indicate a punctuation symbol for words
 autoload -Uz select-word-style
 select-word-style default
+
 # Presume following characters as a word pause
 # / is also counted as a pause so ^W can delete a directory
 zstyle ':zle:*' word-chars " /=;@:{},|"
@@ -100,6 +127,17 @@ precmd() { vcs_info }
 
 # Use '#' as a beginning of a comment
 setopt interactive_comments
+
+setopt auto_menu
+
+setopt hist_save_nodups
+
+setopt hist_ignore_space
+
+setopt hist_reduce_blanks
+
+setopt extended_glob
+
 
 
 ########################################

@@ -1,4 +1,4 @@
-#!/usr/local/bin/zsh
+#!/bin/zsh
 
 # Move directory
 cd
@@ -48,8 +48,8 @@ source ~/.zshrc
 
 pyenv install anaconda2-5.2.0
 pyenv install anaconda3-5.2.0
-pyenv global anaconda3-5.2.0
 pyenv rehash
+pyenv global anaconda3-5.2.0
 python --version
 
 # Install MySQL
