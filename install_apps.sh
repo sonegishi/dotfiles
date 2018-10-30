@@ -22,7 +22,7 @@ brew cask install rubymine
 brew cask install clion
 brew cask install appcode
 brew cask install datagrip
-brew cask install pycharm-pro
+brew cask install pycharm
 brew cask install android-studio
 brew cask install intellij-idea
 
@@ -43,6 +43,5 @@ brew cask install box-sync
 brew cask install parallels
 brew cask install unity
 brew cask install rstudio
-brew cask install jasper
 brew cask install vlc
 
