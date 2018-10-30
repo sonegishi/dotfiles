@@ -8,6 +8,8 @@ alias pe='pyenv exec'
 alias p='python'
 alias g="git"
 
+alias rn='react-native'
+
 alias rmstore="rm .DS_Store; rm */.DS_Store"
 alias rmstorer="rm **/.DS_Store"
 
@@ -169,3 +171,4 @@ case ${OSTYPE} in
     ;;
 esac
 
+alias rni="kill $(lsof -t -i:8081); rm -rf ios/build/; react-native run-ios"
