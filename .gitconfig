@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /Users/SO/.gitignore_global
+  excludesfile = /Users/sonegishi/.gitignore_global
   editor = vim -c \"set fenc=utf-8\"
 [user]
   name = sonegishi
