@@ -54,6 +54,9 @@ python --version
 
 # Install MySQL
 echo Installing MySQL
-brew update
 brew install mysql
+
+# Install Java
+brew cask install java
+brew cask install adoptopenjdk
 
