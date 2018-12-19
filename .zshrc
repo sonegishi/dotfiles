@@ -8,7 +8,9 @@ ssh-add -K ~/.ssh/github_rsa
 alias be="bundle exec"
 alias pe='pyenv exec'
 alias p='python'
+alias pw='pythonw'
 alias g="git"
+alias bs='branches'
 
 alias rn='react-native'
 
@@ -78,6 +80,10 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ## nodebrew
 export PATH=$PATH:/Users/negishi.so/.nodebrew/current/bin
+
+## Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH_TO_FX=/Library/Java/JavaVirtualMachines/javafx-sdk-11.0.1/lib
 
 setopt nolistbeep
 

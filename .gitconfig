@@ -2,8 +2,8 @@
   excludesfile = /Users/sonegishi/.gitignore_global
   editor = vim -c \"set fenc=utf-8\"
 [user]
-  name = sonegishi
-  email = 5055ngs@gmail.com
+	name = sonegishi
+	email = 5055ngs@gmail.com
 [alias]
   st = status -sb
   co = checkout
@@ -18,3 +18,5 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[color]
+	ui = true
