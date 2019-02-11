@@ -50,6 +50,7 @@ pyenv install anaconda2-2018.12
 pyenv install anaconda3-2018.12
 pyenv rehash
 pyenv global anaconda3-2018.12
+conda install python=3.6.8
 python --version
 
 # Install MySQL
