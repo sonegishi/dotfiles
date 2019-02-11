@@ -46,10 +46,10 @@ echo pyenv --version
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 
-pyenv install anaconda2-5.2.0
-pyenv install anaconda3-5.2.0
+pyenv install anaconda2-2018.12
+pyenv install anaconda3-2018.12
 pyenv rehash
-pyenv global anaconda3-5.2.0
+pyenv global anaconda3-2018.12
 python --version
 
 # Install MySQL

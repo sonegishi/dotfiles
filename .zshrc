@@ -9,17 +9,28 @@ alias be="bundle exec"
 alias pe='pyenv exec'
 alias p='python'
 alias pw='pythonw'
-alias g="git"
-alias bs='branches'
+
+alias gst='git status'
+alias gdf='git df'
+alias ga='git add'
+alias gc='git commit -m'
+alias gbs='git branches'
 
 alias rn='react-native'
+
+alias jnote='jupyter notebook'
 
 alias rmstore="rm .DS_Store; rm */.DS_Store"
 alias rmstorer="rm **/.DS_Store"
 
 alias pythonserver='python -m SimpleHTTPServer'
 alias br='bin/rails'
+
+alias doc='docker'
 alias dc='docker-compose'
+alias dm='docker-machine'
+
+alias fb='firebase'
 
 alias la='ls -a'
 alias ll='ls -l'
@@ -61,6 +72,7 @@ function git-diff-numstat-deletions() {
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH="/usr/local/Cellar/git/2.18.0/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 ## rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
@@ -82,8 +94,15 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PATH=$PATH:/Users/negishi.so/.nodebrew/current/bin
 
 ## Java
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH_TO_FX=/Library/Java/JavaVirtualMachines/javafx-sdk-11.0.1/lib
+
+alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
+alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+
+## Apache Spark
+export SPARK_HOME="/usr/local/Cellar/apache-spark/2.4.0/libexec/"
+export PYSPARK_SUBMIT_ARGS="--master local[2]"
 
 setopt nolistbeep
 
@@ -180,3 +199,11 @@ case ${OSTYPE} in
 esac
 
 alias rni="kill $(lsof -t -i:8081); rm -rf ios/build/; react-native run-ios"
+
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/sonegishi/Downloads/docker-book-7d2bf8185732.json"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sonegishi/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sonegishi/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sonegishi/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/sonegishi/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
