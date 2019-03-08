@@ -4,7 +4,6 @@ ssh-add -K ~/.ssh/github_rsa
 
 #######################################
 # Alias
-
 alias be="bundle exec"
 alias pe='pyenv exec'
 alias p='python'
@@ -31,6 +30,8 @@ alias dc='docker-compose'
 alias dm='docker-machine'
 
 alias fb='firebase'
+
+alias fl='floyd'
 
 alias la='ls -a'
 alias ll='ls -l'
@@ -203,7 +204,18 @@ alias rni="kill $(lsof -t -i:8081); rm -rf ios/build/; react-native run-ios"
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/sonegishi/Downloads/docker-book-7d2bf8185732.json"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/sonegishi/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sonegishi/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then
+  source "${HOME}/google-cloud-sdk/path.zsh.inc"
+fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/sonegishi/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/sonegishi/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
+  source "${HOME}/google-cloud-sdk/completion.zsh.inc"
+fi
+
+# Google Cloud VM instances
+alias dl-gcp="~/dl-gcp.sh"
+
+# Enable to use hub on git
+eval "$(hub alias -s)"
+
