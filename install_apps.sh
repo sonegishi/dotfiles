@@ -16,32 +16,27 @@ brew cask install bluej
 brew cask install sublime-text
 
 # Install JetBrains
-echo Installing JetBrains Apps
-brew cask install webstorm
-brew cask install rubymine
-brew cask install clion
-brew cask install appcode
-brew cask install pycharm
+echo Installing JetBrains App(s)
 brew cask install android-studio
-brew cask install intellij-idea
 
-# Install other  apps
-echo Installing apps
+# Install other coding-related apps
+echo Installing coding-related apps
 brew cask install sequel-pro
 brew cask install docker
+brew cask install rstudio
+brew cask install r-app
+brew cask install docker
+
+# Install other apps
+echo Installing other apps
 brew cask install google-chrome
 brew cask install firefox
-brew cask install sourcetree
 brew cask install evernote
-brew cask install 1password
 brew cask install insomniax
+brew cask install 1password
 brew cask install kindle
 brew cask install duet
 brew cask install grammarly
 brew cask install box-sync
 brew cask install parallels
-brew cask install rstudio
-brew cask install r-app
 brew cask install vlc
-brew cask install docker
-

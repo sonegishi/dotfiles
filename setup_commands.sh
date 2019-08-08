@@ -46,11 +46,12 @@ echo pyenv --version
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 
-pyenv install anaconda2-2018.12
-pyenv install anaconda3-2018.12
+pyenv install anaconda2-2019.03
+pyenv install anaconda3-2019.03
 pyenv rehash
-pyenv global anaconda3-2018.12
-conda install python=3.6.8
+pyenv global anaconda3-2019.03
+rm -rf ~/.pyenv/versions/anaconda3-2019.03/python.app
+conda install python=3.6.9
 python --version
 
 # Install MySQL
@@ -60,4 +61,3 @@ brew install mysql
 # Install Java
 brew cask install java
 brew cask install adoptopenjdk
-

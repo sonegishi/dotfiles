@@ -1,4 +1,4 @@
-#!/usr/local/bin/zsh
+#!/bin/zsh
 
 # Uninstall GO
 sudo rm -rf $(which dep)
@@ -23,5 +23,4 @@ sudo rm -rf $(which rbenv)
 
 
 # Uninstall pyenv
-
 

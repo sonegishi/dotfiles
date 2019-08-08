@@ -9,7 +9,7 @@ alias pe='pyenv exec'
 alias p='python'
 alias pw='pythonw'
 
-alias gst='git status'
+alias gst='git st'
 alias gdf='git df'
 alias ga='git add'
 alias gc='git commit -m'
@@ -18,6 +18,7 @@ alias gbs='git branches'
 alias rn='react-native'
 
 alias jnote='jupyter notebook'
+alias jlab='jupyter lab'
 
 alias rmstore="rm .DS_Store; rm */.DS_Store"
 alias rmstorer="rm **/.DS_Store"
@@ -201,21 +202,22 @@ esac
 
 alias rni="kill $(lsof -t -i:8081); rm -rf ios/build/; react-native run-ios"
 
+# Enable to use hub on git
+eval "$(hub alias -s)"
+
+########################################
+# Google-related
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/sonegishi/Downloads/docker-book-7d2bf8185732.json"
 
-# The next line updates PATH for the Google Cloud SDK.
+## The next line updates PATH for the Google Cloud SDK.
 if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then
   source "${HOME}/google-cloud-sdk/path.zsh.inc"
 fi
 
-# The next line enables shell command completion for gcloud.
+## The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
   source "${HOME}/google-cloud-sdk/completion.zsh.inc"
 fi
 
-# Google Cloud VM instances
+## Google Cloud VM instances
 alias dl-gcp="~/dl-gcp.sh"
-
-# Enable to use hub on git
-eval "$(hub alias -s)"
-
