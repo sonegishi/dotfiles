@@ -9,11 +9,12 @@ alias pe='pyenv exec'
 alias p='python'
 alias pw='pythonw'
 
-alias gst='git st'
+alias gst='git st -sb'
 alias gdf='git df'
 alias ga='git add'
 alias gc='git commit -m'
 alias gbs='git branches'
+alias gp='git pull & git fetch -p'
 
 alias rn='react-native'
 
@@ -95,6 +96,12 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ## nodebrew
 export PATH=$PATH:/Users/negishi.so/.nodebrew/current/bin
+
+## nodenv
+export NODENV_ROOT="$HOME/.nodenv"
+export PATH="$HOME/.nodenv/bin:$PATH"
+export DEST_DIR=""
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 ## Java
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
