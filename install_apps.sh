@@ -21,18 +21,17 @@ brew cask install android-studio
 
 # Install other coding-related apps
 echo Installing coding-related apps
-brew cask install sequel-pro
 brew cask install docker
 brew cask install rstudio
 brew cask install r-app
-brew cask install docker
+brew cask install visual-studio-code
 
 # Install other apps
 echo Installing other apps
 brew cask install google-chrome
 brew cask install firefox
 brew cask install evernote
-brew cask install insomniax
+brew cask install insomnia
 brew cask install 1password
 brew cask install kindle
 brew cask install duet
@@ -40,3 +39,5 @@ brew cask install grammarly
 brew cask install box-sync
 brew cask install parallels
 brew cask install vlc
+brew cask install google-backup-and-sync
+

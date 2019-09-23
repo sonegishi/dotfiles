@@ -54,6 +54,9 @@ rm -rf ~/.pyenv/versions/anaconda3-2019.03/python.app
 conda install python=3.6.9
 python --version
 
+# Install yarn
+brew install yarn
+
 # Install MySQL
 echo Installing MySQL
 brew install mysql

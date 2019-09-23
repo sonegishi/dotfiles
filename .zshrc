@@ -73,6 +73,7 @@ function git-diff-numstat-deletions() {
 ## others
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin:$PATH
+export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/Cellar/git/2.18.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
@@ -96,11 +97,11 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PATH=$PATH:/Users/negishi.so/.nodebrew/current/bin
 
 ## Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export PATH_TO_FX=/Library/Java/JavaVirtualMachines/javafx-sdk-11.0.1/lib
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export PATH_TO_FX=/Library/Java/JavaVirtualMachines/javafx-sdk-11.0.1/lib
 
-alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+#alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11`; java -version"
+#alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 
 ## Apache Spark
 export SPARK_HOME="/usr/local/Cellar/apache-spark/2.4.0/libexec/"
@@ -221,3 +222,6 @@ fi
 
 ## Google Cloud VM instances
 alias dl-gcp="~/dl-gcp.sh"
+eval "$(rbenv init -)"
+eval "$(goenv init -)"
+eval "$(pyenv init -)"
