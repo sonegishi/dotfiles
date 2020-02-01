@@ -1,0 +1,77 @@
+# Distributed revision control system
+git
+
+# Add GitHub support to git on the command-line
+hub
+
+# Improved top (interactive process viewer)
+htop
+
+# Graph visualization software from AT&T and Bell Labs
+graphviz
+
+# Play, record, convert, and stream audio and video
+ffmpeg
+
+# Display directories as trees (with optional color/HTML output)
+tree
+
+# Git for data science projects
+dvc
+
+# Draw UML diagrams
+plantuml
+
+# File browser
+ranger
+
+# Platform built on V8 to build network applications
+node
+
+# Dynamic analysis tools (memory, debug, profiling)
+valgrind
+
+# GNU compiler collection
+gcc
+
+# Cross-platform make
+cmake
+
+# Open source computer vision library
+opencv
+
+# Cross-platform application and UI framework
+qt
+
+# Watch files and take action when they change
+watchman
+
+# Network Kanji code conversion Filter (NKF)
+nkf
+
+# Proofreading tool to help writers of technical documentation
+redpen
+
+# Internet file retriever
+wget
+
+# CLI tool that moves files or folder to the trash
+trash
+
+# Download with resuming and segmented downloading
+aria2
+
+# Mac App Store command-line interface
+mas
+
+# Additional completion definitions for zsh
+zsh-completions	
+
+# Bash completion for Pip
+pip-completion
+
+# Bash completion for Django
+django-completion
+
+# Bash completion for Vagrant
+vagrant-completion

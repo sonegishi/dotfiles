@@ -1,0 +1,45 @@
+# Install Communication Apps
+slack
+skype
+spotify
+zoomus
+teamviewer
+station
+
+# Install editor
+atom
+bluej
+sublime-text
+
+# Install JetBrains
+android-studio
+
+# Install other coding-related apps
+docker
+r
+rstudio
+visual-studio-code
+
+# Install other apps
+google-chrome
+firefox
+evernote
+1password
+kindle
+grammarly
+box-sync
+parallels
+vlc
+google-backup-and-sync
+microsoft-office
+ip-in-menu-bar
+sequel-pro
+robomongo
+cocoarestclient
+mysqlworkbench
+vagrant
+clipmenu
+imageoptim
+colors
+flux
+ec2ssh
