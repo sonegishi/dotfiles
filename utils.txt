@@ -65,7 +65,7 @@ aria2
 mas
 
 # Additional completion definitions for zsh
-zsh-completions	
+zsh-completions
 
 # Bash completion for Pip
 pip-completion
