@@ -208,15 +208,7 @@ case ${OSTYPE} in
     ;;
 esac
 
-alias rni="kill $(lsof -t -i:8081); rm -rf ios/build/; react-native run-ios"
-
-# Enable to use hub on git
-eval "$(hub alias -s)"
-
 ########################################
-# Google-related
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/sonegishi/Downloads/docker-book-7d2bf8185732.json"
-
 ## The next line updates PATH for the Google Cloud SDK.
 if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then
   source "${HOME}/google-cloud-sdk/path.zsh.inc"
@@ -228,7 +220,9 @@ if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
 fi
 
 ## Google Cloud VM instances
-alias dl-gcp="~/dl-gcp.sh"
 eval "$(rbenv init -)"
 eval "$(goenv init -)"
 eval "$(pyenv init -)"
+
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/sonegishi/human-resources-mgm-dfa4adcb019c.json"
+

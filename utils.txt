@@ -75,3 +75,10 @@ django-completion
 
 # Bash completion for Vagrant
 vagrant-completion
+
+# GitHub CLI
+github/gh/gh
+
+#
+pyenv-virtualenv
+
