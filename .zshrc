@@ -208,11 +208,6 @@ case ${OSTYPE} in
     ;;
 esac
 
-alias rni="kill $(lsof -t -i:8081); rm -rf ios/build/; react-native run-ios"
-
-# Enable to use hub on git
-eval "$(hub alias -s)"
-
 ########################################
 # Google-related
 
