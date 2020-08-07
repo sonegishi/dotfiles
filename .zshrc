@@ -72,8 +72,8 @@ function git-diff-numstat-deletions() {
 
 # Path
 ## others
-export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/Cellar/git/2.18.0/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
@@ -95,7 +95,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 ## nodebrew
-export PATH=$PATH:/Users/negishi.so/.nodebrew/current/bin
+export PATH="/Users/negishi.so/.nodebrew/current/bin:$PATH"
 
 ## nodenv
 export NODENV_ROOT="$HOME/.nodenv"
@@ -215,20 +215,9 @@ eval "$(hub alias -s)"
 
 ########################################
 # Google-related
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/sonegishi/Downloads/docker-book-7d2bf8185732.json"
 
-## The next line updates PATH for the Google Cloud SDK.
-if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then
-  source "${HOME}/google-cloud-sdk/path.zsh.inc"
-fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/sonegishi/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sonegishi/google-cloud-sdk/path.zsh.inc'; fi
 
-## The next line enables shell command completion for gcloud.
-if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
-  source "${HOME}/google-cloud-sdk/completion.zsh.inc"
-fi
-
-## Google Cloud VM instances
-alias dl-gcp="~/dl-gcp.sh"
-eval "$(rbenv init -)"
-eval "$(goenv init -)"
-eval "$(pyenv init -)"
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/sonegishi/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sonegishi/google-cloud-sdk/completion.zsh.inc'; fi
