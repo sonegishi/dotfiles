@@ -8,7 +8,6 @@ station
 
 # Install editor
 atom
-bluej
 sublime-text
 
 # Install JetBrains
@@ -30,17 +29,9 @@ grammarly
 box-sync
 parallels
 vlc
-google-backup-and-sync
 microsoft-office
-ip-in-menu-bar
 sequel-pro
-robomongo
-cocoarestclient
 mysqlworkbench
 vagrant
-clipmenu
-imageoptim
-colors
-flux
 krisp
 alfred
