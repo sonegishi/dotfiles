@@ -1,6 +1,4 @@
 #zmodload zsh/zprof && zprof
-ssh-add -K ~/.ssh/github_rsa
-
 
 #######################################
 # Alias
