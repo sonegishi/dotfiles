@@ -12,7 +12,7 @@ alias gdf='git df'
 alias ga='git add'
 alias gc='git commit -m'
 alias gbs='git branches'
-alias gp='git pull & git fetch -p'
+alias gp='git pull && git fetch -p'
 
 alias rn='react-native'
 
